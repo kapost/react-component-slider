@@ -1,0 +1,56 @@
+{
+  "name": "@kapost/react-component-slider",
+  "version": "1.0.0",
+  "description": "Responsive React component slider to help with overflowing, horizontally-oriented components",
+  "main": "index.js",
+  "repository": "https://github.com/kapost/react-component-slider",
+  "author": "Justin Hundley",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "slider",
+    "component",
+    "react",
+    "horizontal",
+    "overflow",
+    "scrolling",
+    "resize",
+    "resizing"
+  ],
+  "bugs": {
+    "url": "https://github.com/kapost/react-component-slider/issues"
+  },
+  "files": [
+    "index.js",
+    "yarn.lock",
+    "assets/*.css"
+  ],
+  "scripts": {
+    "build": "babel modules/componentSlider.jsx --out-file index.js && node-sass lib/scss/ -o lib/css/",
+    "clean": "rm -f index.js && rm -f lib/css/*",
+    "prepublish": "yarn run clean && yarn run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "node-sass": "^4.9.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "prop-types": "^15.6.1"
+  },
+  "peerDependencies": {
+    "react": ">=15"
+  }
+}
