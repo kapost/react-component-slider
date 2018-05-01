@@ -26,7 +26,7 @@
     "assets/*.css"
   ],
   "scripts": {
-    "build": "babel modules/componentSlider.jsx --out-file index.js && node-sass lib/scss/ -o lib/css/",
+    "build": "babel modules/componentSlider.jsx --out-file index.js && node-sass lib/stylesheets/ -o lib/stylesheets/",
     "clean": "rm -f index.js && rm -f lib/css/*",
     "prepublish": "yarn run clean && yarn run build"
   },

@@ -1,5 +1,5 @@
 index.js
 package-lock.json
 *.log
-lib/css/*
+*.css
 node_modules/
