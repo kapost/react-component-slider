@@ -2,9 +2,7 @@
 
 This component is useful for situations where you are trying to fit components (e.g. menu/tab navigation) into a horizontal space that could be limited by screen width.  It is a simple, lightweight approach that adds scroll arrows when the contents overflow.  
 
-Example:
-
-(To be added)
+![Example menu navigation](http://g.recordit.co/jQhnEyGx9q.gif)
 
 ## Installation
 
@@ -24,7 +22,7 @@ Import component:
 import ComponentSlider from "@kapost/react-component-slider";
 ```
 
-Import base styles:
+Import base styles (modify for your pipeline tool of choice):
 
 ```scss
 @import "@kapost/react-component-slider/lib/stylesheets/component-slider"
@@ -33,8 +31,32 @@ Import base styles:
 
 ## Quick Start
 
-Soon
+```js
+<ComponentSlider>
+  { inline elements }
+</ComponentSlider>
+```
 
 ## Props
 
-Soon
+### `children` (`node`, required)
+
+Render any arbitrary number of children.  This component is designed for inline / horizontally-oriented elements.
+
+### `renderLeftArrow` / `renderRightArrow` (`func`, optional)
+
+Override what renders for the arrows/navigation. Defaults to:
+
+```js
+    renderLeftArrow: () => <span>&larr;</span>,
+    renderRightArrow: () => <span>&rarr;</span>,
+```
+
+
+## Why are there no tests?
+
+It's difficult to test resizing behavior of this nature without writing integration tests.  Due to the simplicity of the component, I opted not to do that.
+
+## License
+
+MIT
