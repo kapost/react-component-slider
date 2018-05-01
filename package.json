@@ -23,11 +23,11 @@
   "files": [
     "index.js",
     "yarn.lock",
-    "assets/*.css"
+    "lib/stylesheets/*.css"
   ],
   "scripts": {
     "build": "babel modules/componentSlider.jsx --out-file index.js && node-sass lib/stylesheets/ -o lib/stylesheets/",
-    "clean": "rm -f index.js && rm -f lib/css/*",
+    "clean": "rm -f index.js && rm -f lib/stylesheets/*.css",
     "prepublish": "yarn run clean && yarn run build"
   },
   "devDependencies": {
