@@ -23,6 +23,9 @@ class ComponentSlider extends React.Component {
   constructor(props) {
     super(props);
 
+    this.slider = React.createRef();
+    this.sliderContent = React.createRef();
+
     this.state = {
       marginLeft: 0,
     };
@@ -137,12 +140,12 @@ class ComponentSlider extends React.Component {
 
   render = () => {
     return (
-      <div className="component-slider" ref={(el) => { this.slider = el; }}>
+      <div className="component-slider" ref={this.slider}>
         {this.renderLeftArrow()}
         <div className="slider-container">
           <div
             className="slider-content"
-            ref={(el) => { this.sliderContent = el; }}
+            ref={this.sliderContent}
             style={{ marginLeft: `-${this.state.marginLeft}px` }}
           >
             {this.props.children}
