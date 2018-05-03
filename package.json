@@ -1,6 +1,6 @@
 {
   "name": "@kapost/react-component-slider",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Responsive React component slider to help with overflowing, horizontally-oriented components",
   "main": "index.js",
   "repository": "https://github.com/kapost/react-component-slider",
