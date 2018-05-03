@@ -45,7 +45,6 @@ class ComponentSlider extends React.Component {
   }
 
   resetMargin = () => {
-    console.log(this.slider)
     if (this.slider && this.sliderContent) {
       this.setState({ marginLeft: 0 });
     }
