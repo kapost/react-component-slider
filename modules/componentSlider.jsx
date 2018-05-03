@@ -23,8 +23,12 @@ class ComponentSlider extends React.Component {
   constructor(props) {
     super(props);
 
-    this.slider = React.createRef();
-    this.sliderContent = React.createRef();
+    this.setSliderRef = element => {
+      this.slider = element;
+    };
+    this.setSliderContentRef = element => {
+      this.sliderContent = element;
+    };
 
     this.state = {
       marginLeft: 0,
@@ -41,6 +45,7 @@ class ComponentSlider extends React.Component {
   }
 
   resetMargin = () => {
+    console.log(this.slider)
     if (this.slider && this.sliderContent) {
       this.setState({ marginLeft: 0 });
     }
@@ -140,12 +145,12 @@ class ComponentSlider extends React.Component {
 
   render = () => {
     return (
-      <div className="component-slider" ref={this.slider}>
+      <div className="component-slider" ref={this.setSliderRef}>
         {this.renderLeftArrow()}
         <div className="slider-container">
           <div
             className="slider-content"
-            ref={this.sliderContent}
+            ref={this.setSliderContentRef}
             style={{ marginLeft: `-${this.state.marginLeft}px` }}
           >
             {this.props.children}
